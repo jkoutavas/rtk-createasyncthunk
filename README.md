@@ -10,4 +10,5 @@ You can read about this new API on redux-toolkit's [v1.3 release notes](https://
 
 ```
 $ npx react-native init myRTKApp --template react-native-template-typescript
+$ yarn add @reduxjs/toolkit
 ```
