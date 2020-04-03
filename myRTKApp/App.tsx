@@ -20,7 +20,29 @@ declare var global: {HermesInternal: null | {}};
 const App = () => {
   const dispatch = useDispatch();
 
-  const {employees} = useSelector((state: RootState) => state.employees);
+  const {employees, isLoading} = useSelector(
+    (state: RootState) => state.employees,
+  );
+
+  let renderedList = isLoading ? (
+    <Text>Loading...</Text>
+  ) : (
+    employees !== undefined &&
+    employees.map((employee) => (
+      <View style={styles.employeeWrapper} key={employee.id}>
+        <Text style={styles.textCenter}>Employee_id : {employee.id}</Text>
+        <Text style={styles.textCenter}>
+          Employee Name : {employee.employee_name}
+        </Text>
+        <Text style={styles.textCenter}>
+          Employee Salary : {employee.employee_salary}
+        </Text>
+        <Text style={styles.textCenter}>
+          Employee Age : {employee.employee_age}
+        </Text>
+      </View>
+    ))
+  );
 
   return (
     <>
@@ -35,21 +57,7 @@ const App = () => {
           title="Get Employees"
           onPress={() => dispatch(fetchEmployees())}
         />
-        {employees !== undefined &&
-          employees.map((employee) => (
-            <View style={styles.employeeWrapper} key={employee.id}>
-              <Text style={styles.textCenter}>Employee_id : {employee.id}</Text>
-              <Text style={styles.textCenter}>
-                Employee Name : {employee.employee_name}
-              </Text>
-              <Text style={styles.textCenter}>
-                Employee Salary : {employee.employee_salary}
-              </Text>
-              <Text style={styles.textCenter}>
-                Employee Age : {employee.employee_age}
-              </Text>
-            </View>
-          ))}
+        {renderedList}
       </SafeAreaView>
     </>
   );
