@@ -2,7 +2,7 @@
 
 *Readme last updated April 3rd, 2020*
 
-A React Native Typescript app that explores the (Redux Toolkit](https://redux-toolkit.js.org) (RTK).
+A React Native Typescript app that explores the [Redux Toolkit](https://redux-toolkit.js.org) (RTK).
 
 You can read about this new API on redux-toolkit's [v1.3 release notes](https://github.com/reduxjs/redux-toolkit/releases/tag/v1.3.0).
 
