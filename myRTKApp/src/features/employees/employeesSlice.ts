@@ -1,83 +1,52 @@
-import axios from 'axios';
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {AppThunk} from 'app/store';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import {employeesAPI, Employee} from './employeesAPI';
 
-interface Employee {
-  id: string;
-  employee_name: string;
-  employee_salary: string;
-  employee_age: string;
-}
+// Requesting all employees, with loading state, and only one request at a time
 
 interface EmployeesState {
   employees: Employee[];
-  isLoading: boolean;
+  loading: 'idle' | 'pending';
   error: string | null;
 }
 
-let initialState: EmployeesState = {
-  employees: [],
-  isLoading: false,
-  error: null,
-};
-
-interface EmployeesResult {
-  employees: Employee[];
-}
-
-async function getEmployees(): Promise<EmployeesResult> {
-  const url = 'http://dummy.restapiexample.com/api/v1/employees';
-  try {
-    const employeesResponse = await axios.get<{data: Employee[]}>(url);
-    return {
-      employees: employeesResponse.data.data,
-    };
-  } catch (err) {
-    throw err;
-  }
-}
-
-function startLoading(state: EmployeesState) {
-  state.isLoading = true;
-}
-
-function loadingFailed(state: EmployeesState, action: PayloadAction<string>) {
-  state.isLoading = false;
-  state.error = action.payload;
-}
-
-const employeesSlice = createSlice({
-  name: 'employees',
-  initialState,
-  reducers: {
-    getEmployeesStart: startLoading,
-    getEmployeesSuccess(
-      state: EmployeesState,
-      {payload}: PayloadAction<EmployeesResult>,
-    ) {
-      const {employees} = payload;
-      state.isLoading = false;
-      state.error = null;
-      state.employees = employees;
-    },
-    getEmployeesFailure: loadingFailed,
-  },
+export const fetchEmployees = createAsyncThunk('employees/fetch', async () => {
+  async ({}, {getState}) => {
+    const {loading} = getState().employees;
+    if (loading !== 'pending') {
+      return;
+    }
+  };
+  const response = await employeesAPI.getEmployees();
+  return response.employees;
 });
 
-export const {
-  getEmployeesStart,
-  getEmployeesSuccess,
-  getEmployeesFailure,
-} = employeesSlice.actions;
-
-export default employeesSlice.reducer;
-
-export const fetchEmployees = (): AppThunk => async (dispatch) => {
-  try {
-    dispatch(getEmployeesStart());
-    const employees = await getEmployees();
-    dispatch(getEmployeesSuccess(employees));
-  } catch (err) {
-    dispatch(getEmployeesFailure(err.toString()));
-  }
-};
+export const employeesSlice = createSlice({
+  name: 'employees',
+  initialState: {employees: [], loading: 'idle', error: null},
+  reducers: {},
+  extraReducers: {
+    [fetchEmployees.pending]: (state: EmployeesState) => {
+      if (state.loading === 'idle') {
+        state.loading = 'pending';
+      }
+    },
+    [fetchEmployees.fulfilled]: (
+      state: EmployeesState,
+      action: {payload: Employee[]},
+    ) => {
+      if (state.loading === 'pending') {
+        state.loading = 'idle';
+      }
+      state.employees = action.payload;
+    },
+    [fetchEmployees.rejected]: (
+      state: EmployeesState,
+      action: {payload: Employee[]},
+    ) => {
+      if (state.loading === 'pending') {
+        state.loading = 'idle';
+        state.error = action.error;
+      }
+    },
+  },
+});

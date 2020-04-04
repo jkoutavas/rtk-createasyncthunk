@@ -1,7 +1,6 @@
 import {useSelector, useDispatch} from 'react-redux';
 
 import {RootState} from './src/app/rootReducer';
-import {fetchEmployees} from './src/features/employees/employeesSlice';
 
 import React from 'react';
 import {
@@ -14,35 +13,37 @@ import {
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {fetchEmployees} from './src/features/employees/employeesSlice';
 
 declare var global: {HermesInternal: null | {}};
 
 const App = () => {
   const dispatch = useDispatch();
 
-  const {employees, isLoading} = useSelector(
+  const {employees, loading} = useSelector(
     (state: RootState) => state.employees,
   );
 
-  let renderedList = isLoading ? (
-    <Text>Loading...</Text>
-  ) : (
-    employees !== undefined &&
-    employees.map((employee) => (
-      <View style={styles.employeeWrapper} key={employee.id}>
-        <Text style={styles.textCenter}>Employee_id : {employee.id}</Text>
-        <Text style={styles.textCenter}>
-          Employee Name : {employee.employee_name}
-        </Text>
-        <Text style={styles.textCenter}>
-          Employee Salary : {employee.employee_salary}
-        </Text>
-        <Text style={styles.textCenter}>
-          Employee Age : {employee.employee_age}
-        </Text>
-      </View>
-    ))
-  );
+  let renderedList =
+    loading !== 'idle' ? (
+      <Text>Loading...</Text>
+    ) : (
+      employees !== undefined &&
+      employees.map((employee) => (
+        <View style={styles.employeeWrapper} key={employee.id}>
+          <Text style={styles.textCenter}>Employee_id : {employee.id}</Text>
+          <Text style={styles.textCenter}>
+            Employee Name : {employee.employee_name}
+          </Text>
+          <Text style={styles.textCenter}>
+            Employee Salary : {employee.employee_salary}
+          </Text>
+          <Text style={styles.textCenter}>
+            Employee Age : {employee.employee_age}
+          </Text>
+        </View>
+      ))
+    );
 
   return (
     <>

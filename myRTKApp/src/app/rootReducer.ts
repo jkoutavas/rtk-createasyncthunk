@@ -1,9 +1,9 @@
 import {combineReducers} from '@reduxjs/toolkit';
 
-import employeesReducer from '../features/employees/employeesSlice';
+import {employeesSlice} from '../features/employees/employeesSlice';
 
 const rootReducer = combineReducers({
-  employees: employeesReducer,
+  employees: employeesSlice.reducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

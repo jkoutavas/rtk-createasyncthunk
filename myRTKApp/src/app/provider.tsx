@@ -1,6 +1,11 @@
 import React, {ReactNode} from 'react';
 import {Provider} from 'react-redux';
-import store from './store';
+import {configureStore} from '@reduxjs/toolkit';
+import rootReducer from './rootReducer';
+
+const store = configureStore({
+  reducer: rootReducer,
+});
 
 export type InferredStore = typeof store;
 
