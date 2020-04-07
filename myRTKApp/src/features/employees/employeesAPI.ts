@@ -11,16 +11,14 @@ interface GetEmployeesResult {
   employees: Employee[];
 }
 
-export namespace employeesAPI {
-  export async function getEmployees(): Promise<GetEmployeesResult> {
-    const url = 'http://dummy.restapiexample.com/api/v1/employees';
-    try {
-      const employeesResponse = await axios.get<{data: Employee[]}>(url);
-      return {
-        employees: employeesResponse.data.data,
-      };
-    } catch (err) {
-      throw err;
-    }
+export async function getEmployees(): Promise<GetEmployeesResult> {
+  const url = 'http://dummy.restapiexample.com/api/v1/employees';
+  try {
+    const employeesResponse = await axios.get<{data: Employee[]}>(url);
+    return {
+      employees: employeesResponse.data.data,
+    };
+  } catch (err) {
+    throw err;
   }
 }
