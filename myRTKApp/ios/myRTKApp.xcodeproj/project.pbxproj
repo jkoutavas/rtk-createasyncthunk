@@ -16,8 +16,6 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* myRTKAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* myRTKAppTests.m */; };
-		79C8BA83A8335346B81DF033 /* libPods-myRTKApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7D5A740D545725A583614A /* libPods-myRTKApp-tvOS.a */; };
-		7D7DD5BE61CC27093A184693 /* libPods-myRTKApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A1448449D7B7E181D9349249 /* libPods-myRTKApp-tvOSTests.a */; };
 		95FD6B77504F6967C38DFEF5 /* libPods-myRTKApp-myRTKAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29854BC4383E035011667D59 /* libPods-myRTKApp-myRTKAppTests.a */; };
 		BBFF64D68E5A891438F41D26 /* libPods-myRTKApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7B047CD50E02DC014E3D15 /* libPods-myRTKApp.a */; };
 /* End PBXBuildFile section */
@@ -54,19 +52,13 @@
 		29854BC4383E035011667D59 /* libPods-myRTKApp-myRTKAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myRTKApp-myRTKAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* myRTKApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "myRTKApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* myRTKApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "myRTKApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		80C7B3A2A4CE0D6CE9ACA69A /* Pods-myRTKApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRTKApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-myRTKApp-tvOS/Pods-myRTKApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		8112B4947D0A2F011165090C /* Pods-myRTKApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRTKApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-myRTKApp-tvOSTests/Pods-myRTKApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		8817FD15A29012A19FFAF08F /* Pods-myRTKApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRTKApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-myRTKApp-tvOS/Pods-myRTKApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A1448449D7B7E181D9349249 /* libPods-myRTKApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myRTKApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF48B0EE8A2E6583B926B54 /* Pods-myRTKApp-myRTKAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRTKApp-myRTKAppTests.release.xcconfig"; path = "Target Support Files/Pods-myRTKApp-myRTKAppTests/Pods-myRTKApp-myRTKAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		AC291737C1EAAA873E28DB6C /* Pods-myRTKApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRTKApp.debug.xcconfig"; path = "Target Support Files/Pods-myRTKApp/Pods-myRTKApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AD7B047CD50E02DC014E3D15 /* libPods-myRTKApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myRTKApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE7D5A740D545725A583614A /* libPods-myRTKApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myRTKApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21C6613A23AF9A87566F24D /* Pods-myRTKApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRTKApp.release.xcconfig"; path = "Target Support Files/Pods-myRTKApp/Pods-myRTKApp.release.xcconfig"; sourceTree = "<group>"; };
 		C7D8E1F4C91A519743478E35 /* Pods-myRTKApp-myRTKAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRTKApp-myRTKAppTests.debug.xcconfig"; path = "Target Support Files/Pods-myRTKApp-myRTKAppTests/Pods-myRTKApp-myRTKAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F2792490099FC0385F22D198 /* Pods-myRTKApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myRTKApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-myRTKApp-tvOSTests/Pods-myRTKApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79C8BA83A8335346B81DF033 /* libPods-myRTKApp-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D7DD5BE61CC27093A184693 /* libPods-myRTKApp-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,10 +133,6 @@
 				B21C6613A23AF9A87566F24D /* Pods-myRTKApp.release.xcconfig */,
 				C7D8E1F4C91A519743478E35 /* Pods-myRTKApp-myRTKAppTests.debug.xcconfig */,
 				AAF48B0EE8A2E6583B926B54 /* Pods-myRTKApp-myRTKAppTests.release.xcconfig */,
-				8817FD15A29012A19FFAF08F /* Pods-myRTKApp-tvOS.debug.xcconfig */,
-				80C7B3A2A4CE0D6CE9ACA69A /* Pods-myRTKApp-tvOS.release.xcconfig */,
-				F2792490099FC0385F22D198 /* Pods-myRTKApp-tvOSTests.debug.xcconfig */,
-				8112B4947D0A2F011165090C /* Pods-myRTKApp-tvOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -159,8 +145,6 @@
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				AD7B047CD50E02DC014E3D15 /* libPods-myRTKApp.a */,
 				29854BC4383E035011667D59 /* libPods-myRTKApp-myRTKAppTests.a */,
-				AE7D5A740D545725A583614A /* libPods-myRTKApp-tvOS.a */,
-				A1448449D7B7E181D9349249 /* libPods-myRTKApp-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,6 +193,7 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				710C888BC759035F82445DE3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +215,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				46747CC37120D90B65B78DC0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,7 +230,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "myRTKApp-tvOS" */;
 			buildPhases = (
-				79797AF03E5CF34D807FA1A3 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -264,7 +249,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "myRTKApp-tvOSTests" */;
 			buildPhases = (
-				0B19F2BB6F778CFB906BB3A3 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -375,28 +359,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		0B19F2BB6F778CFB906BB3A3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-myRTKApp-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,26 +373,40 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		79797AF03E5CF34D807FA1A3 /* [CP] Check Pods Manifest.lock */ = {
+		46747CC37120D90B65B78DC0 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-myRTKApp/Pods-myRTKApp-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-myRTKApp-tvOS-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myRTKApp/Pods-myRTKApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		710C888BC759035F82445DE3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myRTKApp-myRTKAppTests/Pods-myRTKApp-myRTKAppTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myRTKApp-myRTKAppTests/Pods-myRTKApp-myRTKAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7D5546EA616833E7D858237D /* [CP] Check Pods Manifest.lock */ = {
@@ -673,7 +649,6 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8817FD15A29012A19FFAF08F /* Pods-myRTKApp-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -701,7 +676,6 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80C7B3A2A4CE0D6CE9ACA69A /* Pods-myRTKApp-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -729,7 +703,6 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2792490099FC0385F22D198 /* Pods-myRTKApp-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -756,7 +729,6 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8112B4947D0A2F011165090C /* Pods-myRTKApp-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -813,6 +785,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -873,6 +846,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
