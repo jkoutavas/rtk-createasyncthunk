@@ -1,28 +1,19 @@
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-import {RootState} from './src/app/rootReducer';
+import { RootState } from './src/app/rootReducer';
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  Text,
-  StatusBar,
-  Button,
-} from 'react-native';
+import { SafeAreaView, StyleSheet, View, Text, StatusBar, Button } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
-import {fetchEmployees} from './src/features/employees/employeesSlice';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { fetchEmployees } from './src/features/employees/employeesSlice';
 
-declare var global: {HermesInternal: null | {}};
+declare var global: { HermesInternal: null | {} };
 
 const App = () => {
   const dispatch = useDispatch();
 
-  const {employees, loading} = useSelector(
-    (state: RootState) => state.employees,
-  );
+  const { employees, loading } = useSelector((state: RootState) => state.employees);
 
   let renderedList =
     loading !== 'idle' ? (
@@ -32,15 +23,9 @@ const App = () => {
       employees.map((employee) => (
         <View style={styles.employeeWrapper} key={employee.id}>
           <Text style={styles.textCenter}>Employee_id : {employee.id}</Text>
-          <Text style={styles.textCenter}>
-            Employee Name : {employee.employee_name}
-          </Text>
-          <Text style={styles.textCenter}>
-            Employee Salary : {employee.employee_salary}
-          </Text>
-          <Text style={styles.textCenter}>
-            Employee Age : {employee.employee_age}
-          </Text>
+          <Text style={styles.textCenter}>Employee Name : {employee.employee_name}</Text>
+          <Text style={styles.textCenter}>Employee Salary : {employee.employee_salary}</Text>
+          <Text style={styles.textCenter}>Employee Age : {employee.employee_age}</Text>
         </View>
       ))
     );
@@ -54,10 +39,7 @@ const App = () => {
             <Text style={styles.footer}>Engine: Hermes</Text>
           </View>
         )}
-        <Button
-          title="Get Employees"
-          onPress={() => dispatch(fetchEmployees())}
-        />
+        <Button title="Get Employees" onPress={() => dispatch(fetchEmployees())} />
         {renderedList}
       </SafeAreaView>
     </>

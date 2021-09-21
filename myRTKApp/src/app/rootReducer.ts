@@ -1,6 +1,6 @@
-import {combineReducers} from '@reduxjs/toolkit';
+import { combineReducers } from '@reduxjs/toolkit';
 
-import {employeesSlice} from '../features/employees/employeesSlice';
+import { employeesSlice } from '../features/employees/employeesSlice';
 
 const rootReducer = combineReducers({
   employees: employeesSlice.reducer,

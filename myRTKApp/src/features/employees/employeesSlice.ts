@@ -1,5 +1,5 @@
-import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
-import {getEmployees, Employee} from './employeesAPI';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { getEmployees, Employee } from './employeesAPI';
 
 // Requesting all employees, with loading state, and only one request at a time
 
@@ -21,7 +21,7 @@ export const fetchEmployees = createAsyncThunk<
   // First argument to the payload creator (provide void if there isn't one)
   void,
   // Types for ThunkAPI
-  {state: EmployeesState}
+  { state: EmployeesState }
 >('employees/fetch', async (_, thunkAPI) => {
   async () => {
     if (thunkAPI.getState().loading !== 'pending') {
