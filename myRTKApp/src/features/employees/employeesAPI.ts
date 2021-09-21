@@ -14,7 +14,7 @@ interface GetEmployeesResult {
 export async function getEmployees(): Promise<GetEmployeesResult> {
   const url = 'http://dummy.restapiexample.com/api/v1/employees';
   try {
-    const employeesResponse = await axios.get<{data: Employee[]}>(url);
+    const employeesResponse = await axios.get<{ data: Employee[] }>(url);
     return {
       employees: employeesResponse.data.data,
     };
